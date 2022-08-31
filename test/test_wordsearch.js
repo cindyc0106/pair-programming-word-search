@@ -35,4 +35,31 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  //Our Test Cases
+  it("should return false if arrays are empty", function() {
+    const result = wordSearch([
+      [],
+    ], 'SEINFELD')
+
+    assert.isFalse(result);
+
+
+});
+
+it("should return true if the word is present vertically", function() {
+  const result = wordSearch([
+    ['S', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+    ['E', 'A', 'I', 'K', 'F', 'Z', 'L', 'N'],
+    ['I', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+    ['N', 'M', 'J', 'T', 'E', 'V', 'R', 'G'],
+    ['F', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+    ['E', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+    ['L', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+    ['D', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+  ], 'SEINFELD')
+
+  assert.isTrue(result);
+});
+
 });
